@@ -23,3 +23,21 @@
     }
   }
 }
+
+@media screen and (max-width: 576px) {
+  .navbar {
+    &__lists {
+      gap: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .navbar {
+    &__lists {
+      gap: 15px;
+      font-size: 18px;
+      justify-content: space-between;
+    }
+  }
+}
