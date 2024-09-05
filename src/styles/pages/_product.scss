@@ -1,1 +1,152 @@
 // Product Page styles
+
+.product {
+  padding: 50px 0;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    &-img {
+      width: 100%;
+
+      img {
+        max-width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h3 {
+        font-size: 35px;
+      }
+
+      h3 ~ p {
+        font-size: 20px;
+      }
+
+      &_footer {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        p {
+          font-size: 40px;
+          font-weight: bold;
+        }
+
+        .product__controls {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          input {
+            width: 70px;
+            border: 2px solid palevioletred;
+            outline: none;
+            border-radius: 9px 0 0 9px;
+            padding: 5px 0 5px 10px;
+            text-align: center;
+          }
+
+          button {
+            background-color: transparent;
+            border: 2px solid palevioletred;
+            border-left: none;
+            outline: none;
+            border-radius: 0 9px 9px 0;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: palevioletred;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    &__info {
+      flex-direction: column;
+
+      &-img {
+        text-align: center;
+      }
+
+      &-content {
+        gap: 20px;
+
+        h3 {
+          font-size: 25px;
+        }
+
+        h3 ~ p {
+          font-size: 18px;
+        }
+
+        &_footer {
+          p {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product {
+    &__info {
+      &-img {
+        width: 30%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .product {
+    padding-bottom: 30px;
+    
+    &__info {
+      &-img {
+        width: 40%;
+      }
+
+      &-content {
+        h3 {
+          font-size: 20px;
+        }
+
+        h3 ~ p {
+          font-size: 16px;
+        }
+
+        &_footer {
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
