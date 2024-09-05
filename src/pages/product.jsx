@@ -4,7 +4,6 @@ import Loader from "../components/loader";
 
 function Product() {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   const [data, setData] = useState(null);
   const [loader, setLoader] = useState(true);
@@ -19,7 +18,6 @@ function Product() {
       }
 
       const result = await response.json();
-      console.log(result);
 
       setData(result);
       setLoader(false);
