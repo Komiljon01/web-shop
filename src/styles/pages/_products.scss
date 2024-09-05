@@ -1,1 +1,45 @@
 // Products Page styles
+
+.products {
+  padding: 50px 20px;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .products {
+    &__cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .products {
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products {
+    padding-top: 30px;
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .products {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}
