@@ -36,7 +36,7 @@ function Home() {
 
             <div className="home__cards">
               {data.map((product) => (
-                <Card key={product.id} {...product} />
+                <Card key={product.id} product={product} />
               ))}
             </div>
           </div>
