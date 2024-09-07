@@ -27,7 +27,7 @@ function Home() {
     getData();
   }, [getData]);
   return (
-    <section className="home">
+    <div className="home">
       <div className="container">
         {data ? (
           <div className="home__content">
@@ -44,7 +44,7 @@ function Home() {
           <Loader />
         )}
       </div>
-    </section>
+    </div>
   );
 }
 

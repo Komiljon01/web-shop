@@ -1,7 +1,6 @@
 // Reducer
 
 const initialState = {
-  counter: 0,
   quantity: 0,
   totalQuantity: 0,
   totalPrice: 0,
@@ -61,7 +60,7 @@ export const reducer = (state = initialState, action) => {
           state.totalPrice
         ),
       };
-    case "add-item": {
+    case "ADD_ITEM": {
       const newProduct = action.payload;
 
       const existingProduct = state.cards.find(
@@ -96,7 +95,7 @@ export const reducer = (state = initialState, action) => {
         totalPrice,
       };
     }
-    case "delete-item":
+    case "DELETE_ITEM":
       const deletedItem = state.cards.find(
         (item) => item.id === action.payload
       );
@@ -106,7 +105,7 @@ export const reducer = (state = initialState, action) => {
         totalQuantity: state.totalQuantity - deletedItem.quantity,
         totalPrice: state.totalPrice - deletedItem.quantity * deletedItem.price,
       };
-    case "cancel-orders":
+    case "CANCEL_ORDERS":
       return { ...state, cards: [], totalQuantity: 0, totalPrice: 0 };
     default:
       return state;

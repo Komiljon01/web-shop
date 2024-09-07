@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./styles/main.scss";
+
+// Toast notification
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -9,6 +11,7 @@ import Products from "./pages/products";
 import Cart from "./pages/cart";
 import Navbar from "./components/navbar";
 import Product from "./pages/product";
+import NotFound from "./pages/not-found";
 
 function App() {
   return (
@@ -33,6 +36,7 @@ function App() {
         <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<Product />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

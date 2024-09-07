@@ -1,0 +1,70 @@
+.notfound {
+  padding: 0 0 50px;
+  text-align: center;
+
+  img {
+    width: 60%;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin: 10px 0 30px;
+  }
+
+  a {
+    margin-top: 30px;
+    font-size: 18px;
+    background-color: royalblue;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(65, 105, 225, 0.869);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notfound {
+    padding-top: 50px;
+    img {
+      width: 70%;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .notfound {
+    padding-top: 80px;
+    img {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .notfound {
+    padding-top: 100px;
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    a {
+      font-size: 15px;
+    }
+  }
+}

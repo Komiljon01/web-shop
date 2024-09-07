@@ -27,7 +27,7 @@ function Products() {
     getData();
   }, [getData]);
   return (
-    <section className="products">
+    <div className="products">
       {data ? (
         <div className="products__cards">
           {data.map((product) => (
@@ -37,7 +37,7 @@ function Products() {
       ) : (
         <Loader />
       )}
-    </section>
+    </div>
   );
 }
 

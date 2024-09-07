@@ -7,9 +7,9 @@ export const updateQuantity = ({ id, quantity }) => ({
   payload: { id, quantity },
 });
 export const addItem = (item, quantity) => ({
-  type: "add-item",
+  type: "ADD_ITEM",
   payload: { ...item, quantity: +quantity },
 });
-export const deleteItem = (id) => ({ type: "delete-item", payload: id });
-export const clear = (items) => ({ type: "clear", payload: items });
-export const cancelOrders = () => ({ type: "cancel-orders" });
+export const deleteItem = (id) => ({ type: "DELETE_ITEM", payload: id });
+export const clear = (items) => ({ type: "CLEAR", payload: items });
+export const cancelOrders = () => ({ type: "CANCEL_ORDERS" });

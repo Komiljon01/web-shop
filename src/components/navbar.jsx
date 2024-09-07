@@ -7,7 +7,7 @@ function Navbar() {
   const totalQuantity = useSelector((state) => state.totalQuantity);
 
   return (
-    <section className="navbar">
+    <nav className="navbar">
       <div className="container">
         <div className="navbar__lists">
           <NavLink to="">Home</NavLink>
@@ -18,7 +18,7 @@ function Navbar() {
           </NavLink>
         </div>
       </div>
-    </section>
+    </nav>
   );
 }
 

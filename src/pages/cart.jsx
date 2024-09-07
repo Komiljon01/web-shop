@@ -54,7 +54,7 @@ function cart() {
                   className="buy-order"
                   onClick={() =>
                     handleOrderBtn(
-                      "Your order was successful! Check your email—we've sent you the details."
+                      "Your order was successful! Check your email, we've sent you the details."
                     )
                   }
                 >

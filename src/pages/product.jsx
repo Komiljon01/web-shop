@@ -34,7 +34,7 @@ function Product() {
   }, [getData]);
 
   return (
-    <section className="product">
+    <div className="product">
       <div className="container">
         {data ? (
           <div className="product__info">
@@ -66,7 +66,7 @@ function Product() {
           <Loader />
         )}
       </div>
-    </section>
+    </div>
   );
 }
 
