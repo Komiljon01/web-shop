@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addItem } from "../actions";
 
 function Card({ product }) {
   const [count, setCount] = useState(1);
   const dispatch = useDispatch();
-
   const { title, price, image, id } = product;
 
   return (
@@ -25,7 +24,7 @@ function Card({ product }) {
           type="number"
           min={1}
           defaultValue={count}
-          onChange={(e) => setCount(e.target.value)}
+          onChange={(e) => setCount(Number(e.target.value))}
         />
         <button onClick={() => dispatch(addItem(product, count))}>
           Add to Cart

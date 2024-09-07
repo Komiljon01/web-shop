@@ -1,3 +1,4 @@
+import { FaCartShopping } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
@@ -12,7 +13,8 @@ function Navbar() {
           <NavLink to="">Home</NavLink>
           <NavLink to="products">Products</NavLink>
           <NavLink to="cart">
-            Cart {cards.length > 0 && `(${totalQuantity})`}
+            <FaCartShopping />
+            {cards.length > 0 && `(${totalQuantity})`}
           </NavLink>
         </div>
       </div>

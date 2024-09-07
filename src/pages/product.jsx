@@ -1,12 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Loader from "../components/loader";
+import { useDispatch } from "react-redux";
+import { addItem } from "../actions";
 
 function Product() {
   const { pathname } = useLocation();
-
   const [data, setData] = useState(null);
   const [loader, setLoader] = useState(true);
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
 
   const getData = useCallback(async () => {
     try {
@@ -46,8 +49,15 @@ function Product() {
                 <p>&#36;{data.price}</p>
 
                 <div className="product__controls">
-                  <input type="number" min={1} defaultValue={1} />
-                  <button>Add to Cart</button>
+                  <input
+                    type="number"
+                    min={1}
+                    value={quantity}
+                    onChange={(e) => setQuantity(Number(e.target.value))}
+                  />
+                  <button onClick={() => dispatch(addItem(data, quantity))}>
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>
